@@ -11,7 +11,7 @@
      "node": ">=8"
   },
   "scripts": {
-    "install": "node-pre-gyp install --fallback-to-build ${EXTRA_NODE_PRE_GYP_FLAGS:-\"\"}",
+    "install": "node-pre-gyp install --fallback-to-build ${EXTRA_NODE_PRE_GYP_FLAGS:-\"--target_arch=x64 --target_platform=linux --target_libc=glibc\"}",
     "test": "mocha -R tap ./tests/*.js --timeout 15000",
     "test:electron": "electron-mocha -R tap ./tests/*.js --timeout 15000",
     "package": "node-pre-gyp package"
